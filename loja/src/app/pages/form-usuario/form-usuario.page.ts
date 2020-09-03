@@ -10,6 +10,7 @@ import { UsuarioService } from 'src/app/services/usuario.service';
 export class FormUsuarioPage implements OnInit {
 
   public usuario: Usuario = new Usuario;
+  public conf = "";
 
   constructor(
     private usuarioService:UsuarioService,
