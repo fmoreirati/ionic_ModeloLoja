@@ -1,4 +1,5 @@
 import { Component } from '@angular/core';
+import { UsuarioService } from '../services/usuario.service';
 
 @Component({
   selector: 'app-tab1',
@@ -7,6 +8,18 @@ import { Component } from '@angular/core';
 })
 export class Tab1Page {
 
-  constructor() {}
+  constructor(
+    private usuarioService:UsuarioService
+  ) {}
 
+
+  ionViewWillEnter(){
+    this.usuarioService.auth.user.subscribe(
+    //this.usuarioService.auth.currentUser.then(
+      res => {
+        //this.user = res;
+        console.log(res)
+      }
+    )
+  }
 }

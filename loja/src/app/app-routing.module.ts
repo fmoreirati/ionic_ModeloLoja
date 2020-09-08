@@ -10,6 +10,7 @@ const routes: Routes = [
     path: 'login',
     loadChildren: () => import('./pages/login-usuario/login-usuario.module').then( m => m.LoginUsuarioPageModule)
   },
+
   // {
   //   path: 'pefil-usuario',
   //   loadChildren: () => import('./pages/pefil-usuario/pefil-usuario.module').then( m => m.PefilUsuarioPageModule)
