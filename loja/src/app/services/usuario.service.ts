@@ -1,4 +1,4 @@
-import { Injectable } from '@angular/core';
+import { Injectable, Output } from '@angular/core';
 import { Usuario } from '../model/usuario';
 import { AngularFirestore } from '@angular/fire/firestore';
 import { AngularFireAuth } from '@angular/fire/auth';
@@ -33,6 +33,9 @@ export class UsuarioService {
     )
   }
 
+  public get(key){
+    return this.firedb.collection(this.collection).doc<Usuario>(key).valueChanges();
+  }
 
 
 }

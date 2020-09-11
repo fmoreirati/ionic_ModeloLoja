@@ -13,13 +13,4 @@ export class Tab1Page {
   ) {}
 
 
-  ionViewWillEnter(){
-    this.usuarioService.auth.user.subscribe(
-    //this.usuarioService.auth.currentUser.then(
-      res => {
-        //this.user = res;
-        console.log(res)
-      }
-    )
-  }
 }
