@@ -24,6 +24,10 @@ const routes: Routes = [
         loadChildren: () => import('../pages/form-usuario/form-usuario.module').then(m => m.FormUsuarioPageModule)
       },
       {
+        path: 'perfilUser/:id',
+        loadChildren: () => import('../pages/perfil-usuario/perfil-usuario.module').then( m => m.PerfilUsuarioPageModule)
+      },
+      {
         path: '',
         redirectTo: '/tabs/tab1',
         pathMatch: 'full'

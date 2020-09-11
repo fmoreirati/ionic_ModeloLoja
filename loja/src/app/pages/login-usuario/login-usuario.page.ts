@@ -2,6 +2,7 @@ import { Component, OnInit } from '@angular/core';
 import { UsuarioService } from 'src/app/services/usuario.service';
 import { Router } from '@angular/router';
 import { MessageService } from 'src/app/services/message.service';
+import { Usuario } from 'src/app/model/usuario';
 
 @Component({
   selector: 'app-login-usuario',
@@ -31,6 +32,7 @@ export class LoginUsuarioPage implements OnInit {
     this.usuarioService.auth.signInWithEmailAndPassword(this.email, this.pws).then(
       res => {
         this.msg.dismissLoading();
+        
         this.router.navigate(['/']);
       },
       err => {
