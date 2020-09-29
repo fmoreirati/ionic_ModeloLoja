@@ -1,0 +1,5 @@
+import android.support.v4.content.FileProvider >> para >> import androidx.core.content.FileProvider
+ ---- ou ----
+npm install jetifier --save
+npx jetify
+npx cap sync

@@ -1,0 +1,7 @@
+{
+  "name": "Modelo da loja",
+  "integrations": {
+    "capacitor": {}
+  },
+  "type": "angular"
+}
