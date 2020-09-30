@@ -24,7 +24,11 @@ const routes: Routes = [
         loadChildren: () => import('../pages/form-usuario/form-usuario.module').then(m => m.FormUsuarioPageModule)
       },
       {
-        path: 'perfilUser/:id',
+        path: 'formUser/:param',
+        loadChildren: () => import('../pages/form-usuario/form-usuario.module').then(m => m.FormUsuarioPageModule)
+      },
+      {
+        path: 'perfilUser',
         loadChildren: () => import('../pages/perfil-usuario/perfil-usuario.module').then( m => m.PerfilUsuarioPageModule)
       },
       {

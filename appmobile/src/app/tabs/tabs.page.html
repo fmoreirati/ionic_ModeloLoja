@@ -35,7 +35,8 @@
     </ion-list>
 
     <ion-list *ngIf="auth.user | async as user">
-      <ion-item routerLink = "/tabs/perfilUser/{{user.uid}}">Perfil USER</ion-item>
+      <!-- <ion-item routerLink = "/tabs/perfilUser/{{user.uid}}">Perfil USER</ion-item> -->
+      <ion-item routerLink = "/tabs/perfilUser">Perfil USER</ion-item>
       <ion-item >Configurações</ion-item>
     </ion-list>
   

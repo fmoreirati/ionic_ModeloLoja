@@ -46,4 +46,16 @@ export class UsuarioService {
     );
   }
 
+  update(usuario:Usuario, key: string) {
+    return this.firedb.collection(this.collection).doc<Usuario>(key).update(usuario);
+  }
+
+
+  remover(key: string) {
+    return this.firedb.collection(this.collection).doc<Usuario>(key).delete().then(
+      res => this.auth.user.subscribe(
+        resUser=> resUser.delete()
+      )
+    );
+  }
 }
